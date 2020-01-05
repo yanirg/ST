@@ -7,6 +7,11 @@ class Reporter(object):
     targetFile=None
     def __init__(self, fileName):
       self.targetFile=open(fileName,'a')
+    def appendResults(self, arg):
+        self.targetFile.write(f'{arg}')
+    def closeReport(self):
+        self.targetFile.close()
+        
 
 
 #C:\Users\yanirgo\Desktop\ST.csv
